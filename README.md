@@ -45,7 +45,6 @@ To initialize your quiz:
 
 **`completionResponseMessaging`** (Boolean) *Default: false;* - Displays all questions and selected answers with correct or incorrect response messages when the quiz is completed. 
 
-
 **`showScore`** (Boolean) *Default: false;* - Displays the current score.  Requires additional HTML markup (see below)
 
 #### Deprecated Options
