@@ -356,6 +356,13 @@
                 if (nextQuestion.length) {
                     currentQuestion.fadeOut(300, function(){
                         nextQuestion.find(_prevQuestionBtn).show().end().fadeIn(500);
+                        if (plugin.config.showScore) {
+                            var score = $(_element + ' ' + _correct).length;
+                            $('#score-correct').text(score);
+                            console.log(currentQuestion.attr('id').replace('question', ''));
+                            var incorrect = parseInt(currentQuestion.attr('id').replace('question', '')) + 1 - score;
+                            $('#score-incorrect').text(incorrect);
+                        }
                     });
                 } else {
                     plugin.method.completeQuiz();

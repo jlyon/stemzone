@@ -46,6 +46,8 @@ To initialize your quiz:
 **`completionResponseMessaging`** (Boolean) *Default: false;* - Displays all questions and selected answers with correct or incorrect response messages when the quiz is completed. 
 
 
+**`showScore`** (Boolean) *Default: false;* - Displays the current score.  Requires additional HTML markup (see below)
+
 #### Deprecated Options
 
 **`disableNext`** - Prevents submitting a question with zero answers. You should now use <code>preventUnanswered</code> instead.
@@ -85,6 +87,11 @@ The slickQuiz ID and class names are what are important here:
         </div>
     </body>
 
+Optionally add the following if showScore (see above) is true
+    <div class="quizScore">
+        <div><div class="score-label">Right</div><div class="score-value" id="score-correct"></div></div>
+        <div><div class="score-label">Wrong</div><div class="score-value" id="score-incorrect"></div></div>
+    </div>
 
 ## Base Config Options
 
