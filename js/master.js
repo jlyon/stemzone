@@ -9,7 +9,7 @@ var isPhonegap = false;
 // Init quiz
 function startQuiz() {
   $quiz.slickQuiz({
-    numberOfQuestions: 1,
+    numberOfQuestions: 10,
     randomSortQuestions: true,
     preventUnanswered: true,
     perQuestionResponseMessaging: true,
