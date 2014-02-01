@@ -169,13 +169,18 @@ a.startQuiz
 
     input
       float: left
-      visibility: hidden
+      width: 50px
+      height: 31px
+      position: relative
+      z-index: 1
+      opacity: 0
+      margin: 0 0 0 -5px
 
     label
       display: block
       font-size: 28px
       +font-alt
-      padding-left: 45px
+      margin-left: 45px
     
     .marker
       +s-image(check)
@@ -183,6 +188,7 @@ a.startQuiz
       position: absolute
       left: 0
       top: 0
+      z-index: 0
 
   // one is clicked
   .selected
