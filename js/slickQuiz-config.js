@@ -67,13 +67,13 @@ var quizJSON = {
             "id": 5,
             "q": "Employees in STEM related jobs consistently earn how much more than workers in non STEM related positions?",
             "a": [
-                {"option": "7%", "correct": false},
-                {"option": "26%", "correct": true},
-                {"option": "50%", "correct": false},
-                {"option": "65%", "correct": false}
+                {"option": "7 percent", "correct": false},
+                {"option": "26 percent", "correct": true},
+                {"option": "50 percent", "correct": false},
+                {"option": "65 percent", "correct": false}
             ],
             "correct": "<p><span>That's correct.</span> The U.S. Department of Commerce Economics and Statistics Administration has discovered that employees in STEM jobs consistently earn a wage premium of up to 26 percent more than workers in non-STEM positions, a trend that has been steady over time.</p>",
-            "incorrect": "<p><span>No, it's actually 26% more.</span> The U.S. Department of Commerce Economics and Statistics Administration has discovered that employees in STEM jobs consistently earn a wage premium of up to 26 percent more than workers in non-STEM positions, a trend that has been steady over time.</p>" // no comma here
+            "incorrect": "<p><span>No, it's actually 26 percent more.</span> The U.S. Department of Commerce Economics and Statistics Administration has discovered that employees in STEM jobs consistently earn a wage premium of up to 26 percent more than workers in non-STEM positions, a trend that has been steady over time.</p>" // no comma here
         },
         { // Question 6
             "id": 6,
@@ -207,7 +207,7 @@ var quizJSON = {
                 {"option": "20,000 Times Stronger", "correct": false}
             ],
             "correct": "<p><span>Yes.</span> An earthquake that measures 8 on the Richter Scale would be 10,000 Times Stronger than an earthquake that measures 4. <br/><br/>Improving STEM education will help the U.S. build a highly skilled workforce that can compete for and excel in the careers that fuel innovation and help solve some of our biggest challenges.</p>",
-            "incorrect": "<p><span>Guess again. An earthquake that measures 8 on the Richter Scale would be 10,000 Times Stronger than an earthquake that measures 4</span> Improving STEM education will help the U.S. build a highly skilled workforce that can compete for and excel in the careers that fuel innovation and help solve some of our biggest challenges.</p>" // no comma here
+            "incorrect": "<p><span>Guess again.</span> An earthquake that measures 8 on the Richter Scale would be 10,000 Times Stronger than an earthquake that measures 4.<br/><br/> Improving STEM education will help the U.S. build a highly skilled workforce that can compete for and excel in the careers that fuel innovation and help solve some of our biggest challenges.</p>" // no comma here
         }
         ,
         { // Question 17
