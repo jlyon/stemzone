@@ -1,0 +1,453 @@
+@font-face {
+  font-family: "EraserRegular";
+  src: url("../fonts/EraserRegular.ttf");
+  src: url("../fonts/EraserRegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Jrhand";
+  src: url("../fonts/Jrhand.ttf");
+  src: url("../fonts/Jrhand.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 23, ../sass/stemzone.sass */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 26, ../sass/stemzone.sass */
+html {
+  background: url(../images/back.jpg) no-repeat 0 0;
+  background-size: 100% 100%;
+}
+
+/* line 30, ../sass/stemzone.sass */
+html, body {
+  height: 100%;
+}
+
+/* line 33, ../sass/stemzone.sass */
+body {
+  color: white;
+  font-family: "Jrhand";
+  padding: 40px;
+  position: relative;
+}
+
+/* line 39, ../sass/stemzone.sass */
+.back-top,
+.back-right,
+.back-left {
+  opacity: 0.1;
+  position: absolute;
+  z-index: 0;
+}
+
+/* line 46, ../sass/stemzone.sass */
+.back-top {
+  background: url('../images/sprites-sd8cc02c979.png') 0 -1264px no-repeat;
+  height: 85px;
+  width: 228px;
+  top: 0;
+  right: 20%;
+}
+
+/* line 51, ../sass/stemzone.sass */
+.back-right {
+  background: url('../images/sprites-sd8cc02c979.png') 0 -403px no-repeat;
+  height: 301px;
+  width: 302px;
+  bottom: 15%;
+  right: 0;
+}
+
+/* line 56, ../sass/stemzone.sass */
+.back-left {
+  background: url('../images/sprites-sd8cc02c979.png') 0 -911px no-repeat;
+  height: 141px;
+  width: 120px;
+  bottom: 40%;
+  left: 0;
+}
+
+/* line 65, ../sass/stemzone.sass */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "EraserRegular";
+}
+
+/* line 68, ../sass/stemzone.sass */
+h1 {
+  font-size: 60px;
+  text-align: center;
+}
+
+/* line 76, ../sass/stemzone.sass */
+.logo {
+  background: url('../images/sprites-sd8cc02c979.png') 0 -1186px no-repeat;
+  height: 33px;
+  width: 231px;
+  display: inline-block;
+  overflow: hidden;
+  text-indent: -9000px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block !important;
+}
+/* line 80, ../sass/stemzone.sass */
+.front .logo {
+  background: url('../images/sprites-sd8cc02c979.png') 0 -855px no-repeat;
+  height: 56px;
+  width: 400px;
+  display: inline-block;
+  overflow: hidden;
+  text-indent: -9000px;
+  margin-top: 60px;
+}
+
+/* line 84, ../sass/stemzone.sass */
+a.restart {
+  background: url('../images/sprites-sd8cc02c979.png') 0 -1568px no-repeat;
+  height: 34px;
+  width: 130px;
+  display: inline-block;
+  overflow: hidden;
+  text-indent: -9000px;
+  cursor: pointer;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+/* line 80, ../sass/_mixins.sass */
+a.restart:hover, a.restart:active, a.restart:focus {
+  opacity: 0.9;
+}
+/* line 148, ../sass/_mixins.sass */
+.front a.restart {
+  display: none;
+}
+
+/* line 92, ../sass/stemzone.sass */
+.quizName {
+  display: none !important;
+}
+/* line 95, ../sass/stemzone.sass */
+.front .quizName {
+  display: block !important;
+  margin-top: 110px;
+}
+
+/* line 99, ../sass/stemzone.sass */
+.quizArea {
+  text-align: center;
+}
+
+/* line 102, ../sass/stemzone.sass */
+.quizHeader {
+  position: relative;
+  z-index: 1;
+}
+
+/* line 105, ../sass/stemzone.sass */
+a.startQuiz {
+  background: url('../images/sprites-sd8cc02c979.png') 0 -1219px no-repeat;
+  height: 45px;
+  width: 288px;
+  display: inline-block;
+  overflow: hidden;
+  text-indent: -9000px;
+  cursor: pointer;
+  margin-top: 50px;
+}
+/* line 80, ../sass/_mixins.sass */
+a.startQuiz:hover, a.startQuiz:active, a.startQuiz:focus {
+  opacity: 0.9;
+}
+
+/* line 114, ../sass/stemzone.sass */
+.quizArea > .quizScore {
+  background: url('../images/sprites-sd8cc02c979.png') 0 -1349px no-repeat;
+  height: 114px;
+  width: 135px;
+  right: 40px;
+  top: 40px;
+  padding-top: 71px;
+  position: absolute;
+  font-family: "EraserRegular";
+}
+/* line 148, ../sass/_mixins.sass */
+.front .quizArea > .quizScore {
+  display: none;
+}
+
+/* line 124, ../sass/stemzone.sass */
+.score-label {
+  display: none;
+}
+
+/* line 127, ../sass/stemzone.sass */
+.score-value {
+  float: left;
+  font-size: 40px;
+  width: 67px;
+  text-align: center;
+}
+
+/* line 147, ../sass/stemzone.sass */
+.questions {
+  padding-top: 60px;
+  text-align: left;
+  max-width: 65%;
+  margin-right: auto;
+  margin-left: auto;
+  display: block !important;
+}
+/* line 154, ../sass/stemzone.sass */
+.questions .question h3 {
+  color: #41acc9;
+  font-family: "Jrhand";
+  font-size: 36px;
+}
+/* line 159, ../sass/stemzone.sass */
+.questions .answers {
+  padding-top: 60px;
+}
+/* line 162, ../sass/stemzone.sass */
+.questions .answers li {
+  margin-bottom: 30px;
+  position: relative;
+}
+/* line 166, ../sass/stemzone.sass */
+.questions .answers input {
+  float: left;
+  visibility: hidden;
+}
+/* line 170, ../sass/stemzone.sass */
+.questions .answers label {
+  display: block;
+  font-size: 28px;
+  font-family: "EraserRegular";
+  padding-left: 45px;
+}
+/* line 176, ../sass/stemzone.sass */
+.questions .answers .marker {
+  background: url('../images/sprites-sd8cc02c979.png') 0 -1602px no-repeat;
+  height: 23px;
+  width: 21px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+/* line 185, ../sass/stemzone.sass */
+.questions .selected label {
+  color: #959595;
+}
+/* line 188, ../sass/stemzone.sass */
+.questions .selected .marker {
+  background: url('../images/sprites-sd8cc02c979.png') 0 -1625px no-repeat;
+  height: 23px;
+  width: 21px;
+}
+/* line 192, ../sass/stemzone.sass */
+.questions .selected input:checked ~ label {
+  color: white !important;
+}
+/* line 195, ../sass/stemzone.sass */
+.questions .selected input:checked ~ .marker {
+  background: url('../images/sprites-sd8cc02c979.png') 0 -1648px no-repeat;
+  height: 23px;
+  width: 21px;
+}
+/* line 200, ../sass/stemzone.sass */
+.questions .revealing h3 {
+  display: none;
+}
+/* line 204, ../sass/stemzone.sass */
+.questions .revealing .responses p {
+  font-size: 36px;
+}
+/* line 207, ../sass/stemzone.sass */
+.questions .revealing .responses p > span {
+  font-family: "EraserRegular";
+  display: block;
+  font-size: 60px;
+  width: 100%;
+  margin-bottom: 60px;
+  text-align: center;
+}
+/* line 216, ../sass/stemzone.sass */
+.questions .revealing .responses .correct span {
+  color: #3fc03f;
+}
+/* line 220, ../sass/stemzone.sass */
+.questions .revealing .responses .incorrect span {
+  color: #f83435;
+}
+
+/* line 225, ../sass/stemzone.sass */
+.checkAnswer {
+  margin-top: 85px;
+  background: url('../images/sprites-sd8cc02c979.png') 0 -1097px no-repeat;
+  height: 45px;
+  width: 347px;
+  display: inline-block;
+  overflow: hidden;
+  text-indent: -9000px;
+  cursor: pointer;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+/* line 80, ../sass/_mixins.sass */
+.checkAnswer:hover, .checkAnswer:active, .checkAnswer:focus {
+  opacity: 0.9;
+}
+/* line 148, ../sass/_mixins.sass */
+.front .checkAnswer {
+  display: none;
+}
+/* line 231, ../sass/stemzone.sass */
+.selected .checkAnswer {
+  background: url('../images/sprites-sd8cc02c979.png') 0 -1052px no-repeat;
+  height: 45px;
+  width: 347px;
+  display: inline-block;
+  overflow: hidden;
+  text-indent: -9000px;
+  display: block;
+}
+
+/* line 235, ../sass/stemzone.sass */
+.nextQuestion {
+  margin-top: 50px;
+  background: url('../images/sprites-sd8cc02c979.png') 0 -1142px no-repeat;
+  height: 44px;
+  width: 288px;
+  display: inline-block;
+  overflow: hidden;
+  text-indent: -9000px;
+  cursor: pointer;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  display: none;
+}
+/* line 80, ../sass/_mixins.sass */
+.nextQuestion:hover, .nextQuestion:active, .nextQuestion:focus {
+  opacity: 0.9;
+}
+/* line 241, ../sass/stemzone.sass */
+.revealing .nextQuestion {
+  display: block !important;
+}
+
+/* line 249, ../sass/stemzone.sass */
+.quizResults .quizScore {
+  background: none;
+  font-size: 24px;
+  margin-top: 40px;
+  position: relative;
+  right: auto;
+  top: 0;
+  text-align: center;
+  padding-top: 0;
+  width: 100%;
+}
+/* line 260, ../sass/stemzone.sass */
+.quizResults .quizScore span {
+  color: #41acc9;
+  display: block;
+  font-size: 62px;
+  margin-top: 20px;
+}
+/* line 266, ../sass/stemzone.sass */
+.quizResults .quizLevel, .quizResults .quizResultsCopy {
+  text-align: left;
+  max-width: 65%;
+  margin-right: auto;
+  margin-left: auto;
+  display: block !important;
+  font-size: 36px;
+}
+/* line 272, ../sass/stemzone.sass */
+.quizResults .quizLevel {
+  padding-top: 60px;
+  text-align: center;
+}
+/* line 278, ../sass/stemzone.sass */
+.quizResults .quizLevel.level1 span, .quizResults .quizLevel.level2 span {
+  color: #3fc03f;
+}
+/* line 282, ../sass/stemzone.sass */
+.quizResults .quizLevel.level3 span {
+  color: #dd9121;
+}
+/* line 287, ../sass/stemzone.sass */
+.quizResults .quizLevel.level4 span, .quizResults .quizLevel.level5 span {
+  color: #f83435;
+}
+/* line 291, ../sass/stemzone.sass */
+.quizResults .quizResultsCopy {
+  padding-top: 20px;
+}
+
+/* line 295, ../sass/stemzone.sass */
+.complete .quizArea {
+  display: block !important;
+}
+/* line 298, ../sass/stemzone.sass */
+.complete .questions,
+.complete .quizArea .quizScore {
+  display: none !important;
+}
+
+/* line 306, ../sass/stemzone.sass */
+.questionCount {
+  font-family: "EraserRegular";
+  color: #959595;
+  font-size: 20px;
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+}
+
+/* line 314, ../sass/stemzone.sass */
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 0;
+}
+/* line 322, ../sass/stemzone.sass */
+.front .footer {
+  background: url('../images/sprites-sd8cc02c979.png') 0 0 no-repeat;
+  height: 403px;
+  width: 1280px;
+}
+
+/* line 325, ../sass/stemzone.sass */
+.chevron {
+  background: url('../images/sprites-sd8cc02c979.png') 0 -1463px no-repeat;
+  height: 105px;
+  width: 112px;
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+}
+/* line 331, ../sass/stemzone.sass */
+.front .chevron {
+  background: url('../images/sprites-sd8cc02c979.png') 0 -704px no-repeat;
+  height: 151px;
+  width: 161px;
+  left: 50%;
+  margin-left: -80px;
+  bottom: 80px;
+}

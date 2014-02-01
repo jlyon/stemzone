@@ -1,0 +1,335 @@
+@import variables
+@import mixins
+@import compass
+
+
+@font-face
+  font-family: $eraserName
+  src: url("#{$eraserFileName}.ttf")
+  src: url("#{$eraserFileName}.ttf") format("truetype")
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: $jrHandName
+  src: url("#{$jrHandFileName}.ttf")
+  src: url("#{$jrHandFileName}.ttf") format("truetype")
+  font-weight: normal
+  font-style: normal
+
+// Wrapper
+// ------------------------------------------------------
+
+*, *:before, *:after
+  +box-sizing(border-box)
+
+html
+  background: url(../images/back.jpg) no-repeat 0 0
+  background-size: 100% 100%
+
+html, body
+  height: 100%
+
+body
+  color: white
+  font-family: $font
+  padding: $area-pad
+  position: relative
+
+.back-top,
+.back-right,
+.back-left
+  opacity: 0.1
+  position: absolute
+  z-index: 0
+
+.back-top
+  +s-image(back-top)
+  top: 0
+  right: 20%
+
+.back-right
+  +s-image(back-right)
+  bottom: 15%
+  right: 0
+
+.back-left
+  +s-image(back-left)
+  bottom: 40%
+  left: 0
+
+
+// Type
+// ------------------------------------------------------
+
+h1, h2, h3, h4, h5, h6
+  +font-alt
+
+h1
+  font-size: 60px
+  text-align: center
+
+
+// Header
+// ------------------------------------------------------
+
+.logo
+  +s-replace(logo-small)
+  +div-center
+
+  .front &
+    +s-replace(logo)
+    margin-top: 60px
+
+a.restart
+  +s-replace(restart, true)
+  position: absolute
+  top: $area-pad
+  left: $area-pad
+
+  +hide-front
+
+.quizName
+  display: none!important
+
+  .front &
+    display: block!important
+    margin-top: 110px
+
+.quizArea
+  text-align: center
+
+.quizHeader
+  +elevate()
+
+a.startQuiz
+  +s-replace(take-test, true)
+  margin-top: 50px
+
+
+// Quiz count
+// ------------------------------------------------------
+
+.quizArea > 
+  .quizScore
+    +s-image(tally)
+    right: $area-pad
+    top: $area-pad
+    padding-top: 71px
+    position: absolute
+    +font-alt
+
+    +hide-front
+
+.score-label
+  display: none
+
+.score-value
+  float: left
+  font-size: 40px
+  width: 67px
+  text-align: center
+
+#score-correct
+
+#score-incorrect
+    
+
+
+// Questions
+// ------------------------------------------------------
+
+.quizArea,
+.questions
+  //position: relative
+  //z-index: 1
+
+.questions
+  padding-top: 60px
+  text-align: left
+  max-width: 65%
+  +div-center
+
+  .question
+    h3
+      color: $blue
+      +font-normal()
+      font-size: 36px
+
+  .answers
+    padding-top: 60px
+
+    li
+      margin-bottom: 30px
+      position: relative
+
+    input
+      float: left
+      visibility: hidden
+
+    label
+      display: block
+      font-size: 28px
+      +font-alt
+      padding-left: 45px
+    
+    .marker
+      +s-image(check)
+      display: block
+      position: absolute
+      left: 0
+      top: 0
+
+  // one is clicked
+  .selected
+    label
+      color: $gray
+
+    .marker
+      +s-image(check-disabled)
+
+    input:checked 
+      & ~ label
+        color: white!important
+
+      & ~ .marker 
+        +s-image(check-selected)
+
+  // looking at the solution
+  .revealing
+    h3
+      display: none
+
+    .responses
+      p
+        font-size: 36px
+
+        & > span
+          +font-alt
+          display: block
+          font-size: 60px
+          width: 100%
+          margin-bottom: 60px
+          text-align: center
+
+      .correct
+        span
+          color: $green
+
+      .incorrect
+        span
+          color: $red 
+
+
+
+.checkAnswer
+  margin-top: 85px
+  +s-replace(check-answer, true)
+  +div-center(true)
+  +hide-front
+
+  .selected &
+    +s-replace(check-answer-ready)
+    display: block
+
+.nextQuestion
+  margin-top: 50px
+  +s-replace(next-question, true)
+  +div-center(true)
+  display: none 
+
+  .revealing &
+    display: block!important
+
+
+// Results (Quiz complete)
+// ------------------------------------------------------
+
+.quizResults
+  .quizScore
+    background: none
+    font-size: 24px
+    margin-top: 40px
+    position: relative
+    right: auto
+    top: 0
+    text-align: center
+    padding-top: 0
+    width: 100%
+
+    span 
+      color: $blue
+      display: block
+      font-size: 62px
+      margin-top: 20px
+
+  .quizLevel, .quizResultsCopy
+    text-align: left
+    max-width: 65%
+    +div-center
+    font-size: 36px
+
+  .quizLevel
+    padding-top: 60px
+    text-align: center
+
+    &.level1,
+    &.level2
+      span
+        color: $green
+
+    &.level3
+      span
+        color: $yellow
+
+    &.level4,
+    &.level5
+      span
+        color: $red
+
+
+  .quizResultsCopy
+    padding-top: 20px
+
+.complete
+  .quizArea
+    display: block!important
+
+  .questions,
+  .quizArea .quizScore
+    display: none!important
+
+
+// Footer
+// ------------------------------------------------------
+
+.questionCount
+  +font-alt
+  color: $gray
+  font-size: 20px
+  position: absolute
+  bottom: $area-pad
+  right: $area-pad
+
+.footer
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+  width: 100%
+  z-index: 0
+
+  .front &
+    +s-image(front-cloud)
+
+.chevron
+  +s-image(chevron-white)
+  position: absolute
+  bottom: $area-pad
+  left: $area-pad
+
+  .front &
+    +s-image(chevron)
+    left: 50%
+    margin-left: -80px
+    bottom: 80px
