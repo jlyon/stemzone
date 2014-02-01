@@ -24,7 +24,7 @@
 /* line 26, ../sass/stemzone.sass */
 html {
   background: url(../images/back.jpg) no-repeat 0 0;
-  background-size: 100% 100%;
+  background-size: cover;
 }
 
 /* line 30, ../sass/stemzone.sass */
@@ -424,16 +424,18 @@ a.startQuiz:hover, a.startQuiz:active, a.startQuiz:focus {
   left: 0;
   right: 0;
   width: 100%;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6;
   z-index: 0;
 }
-/* line 322, ../sass/stemzone.sass */
+/* line 323, ../sass/stemzone.sass */
 .front .footer {
   background: url('../images/sprites-sd8cc02c979.png') 0 0 no-repeat;
   height: 403px;
   width: 1280px;
 }
 
-/* line 325, ../sass/stemzone.sass */
+/* line 326, ../sass/stemzone.sass */
 .chevron {
   background: url('../images/sprites-sd8cc02c979.png') 0 -1463px no-repeat;
   height: 105px;
@@ -442,7 +444,7 @@ a.startQuiz:hover, a.startQuiz:active, a.startQuiz:focus {
   bottom: 40px;
   left: 40px;
 }
-/* line 331, ../sass/stemzone.sass */
+/* line 332, ../sass/stemzone.sass */
 .front .chevron {
   background: url('../images/sprites-sd8cc02c979.png') 0 -704px no-repeat;
   height: 151px;
