@@ -9,7 +9,7 @@ var isPhonegap = false;
 // Init quiz
 function startQuiz() {
   $quiz.slickQuiz({
-    numberOfQuestions: 10,
+    numberOfQuestions: 1,
     randomSortQuestions: true,
     preventUnanswered: true,
     perQuestionResponseMessaging: true,
@@ -81,10 +81,13 @@ $('a.nextQuestion').click(function () {
   }
 });
 
+// Wrapper
+});
 
 /* **************** FILES/PHONEGAP support ******************* */
 
 function onDeviceReady() {
+  alert('ready');
    window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, fail);
    window.resolveLocalFileSystemURI("/sdcard/example.txt", onResolveSuccess, fail);
    var isApp = 'yes';
@@ -119,8 +122,4 @@ function successDirectoryReader(fileSystem){
     alert(e);
   }
 }
-
-
-// Wrapper
-});
 

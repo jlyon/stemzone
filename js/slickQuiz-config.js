@@ -6,7 +6,7 @@ var quizJSON = {
     "info": {
         "name":    "What's your STEM I.Q.?",
         "main":    "", // Text below title on splash page
-        "results": "<h5>We hope you enjoyed the quiz. Click on Restart in the upper-left to try your hand at some new questions.</p>",
+        "results": "<p align='center'>&nbsp;</p><p align='center'>We hope you enjoyed the quiz.</p><p align='center'>Want to try your hand at some new questions?</p><p align='center'><a href='#' onclick='location.reload();return false;'' class='restart'>Restart</a>",
         "level1":  "STEM Expert",
         "level2":  "STEM Contender",
         "level3":  "STEM Amateur",
