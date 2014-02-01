@@ -8,7 +8,7 @@
    var root = this;
    cb = window.plugins.childBrowser;
    call();
-}*/
+}
 
 function onFileSystemSuccess(fileSystem) {
    console.log(fileSystem.name);
@@ -35,7 +35,7 @@ function successDirectoryReader(fileSystem){
   } catch (e) {
     alert(e);
   }
-}
+}*/
 
 
 var app = {
@@ -56,7 +56,7 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        alert('ready1');
+        alert('ready1')
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {

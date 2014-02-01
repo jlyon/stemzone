@@ -60,8 +60,8 @@ var quizJSON = {
                 {"option": "Einstein", "correct": false},
                 {"option": "Honey Boo Boo", "correct": false}
             ],
-            "correct": "<p><span>That's right!</span> In a closed system the total momentum is constant. This fact, known as the law of conservation of momentum, is implied by Newton's laws of motion. Check out the giant Newton’s Cradle in the STEM ZONE demonstrated this principle.</p>",
-            "incorrect": "<p><span>Sorry, it was Newton.</span> In a closed system the total momentum is constant. This fact, known as the law of conservation of momentum, is implied by Newton's laws of motion. Check out the giant Newton’s Cradle in the STEM ZONE demonstrated this principle.</p>" // no comma here
+            "correct": "<p><span>That's right!</span> In a closed system the total momentum is constant. This fact, known as the law of conservation of momentum, is implied by Newton's laws of motion. Check out the giant Newton’s Cradle in the STEM ZONE, which demonstrates this principle.</p>",
+            "incorrect": "<p><span>Sorry, it was Newton.</span> In a closed system the total momentum is constant. This fact, known as the law of conservation of momentum, is implied by Newton's laws of motion. Check out the giant Newton’s Cradle in the STEM ZONE demonstrates this principle.</p>" // no comma here
         },
         { // Question 5
             "id": 5,
@@ -232,8 +232,8 @@ var quizJSON = {
                 {"option": "Pyruvic Acid and Water", "correct": false},
                 {"option": "Glucose and Carbon Dioxide", "correct": false}
             ],
-            "correct": "<p><span>Yes.</span> An excess of Carbon Dioxide and Water form carbonic acid.<br/><br/> Chevron has teamed up with the Fab Foundation in the first corporate initiative of its kind.  Chevron support will bring Fab Labs to locations in areas where we operate as well as help build a model replicable by others.  A Fab Lab gives students the tools to develop the practical and critical thinking skills they will need to be the inventors and innovators of the future. Fab Labs are technical platforms for STEM education, workforce development and business idea prototyping.</p>",
-            "incorrect": "<p><span>Sorry.</span> It's actually an excess of Carbon Dioxide and Water that form carbonic acid. <br/><br/>Chevron has teamed up with the Fab Foundation in the first corporate initiative of its kind.  Chevron support will bring Fab Labs to locations in areas where we operate as well as help build a model replicable by others.  A Fab Lab gives students the tools to develop the practical and critical thinking skills they will need to be the inventors and innovators of the future. Fab Labs are technical platforms for STEM education, workforce development and business idea prototyping.</p>" // no comma here
+            "correct": "<p><span>Yes.</span> An excess of Carbon Dioxide and Water form carbonic acid.<br/><br/> Chevron has teamed up with the Fab Foundation in the first corporate initiative of its kind. A Fab Lab gives students the tools to develop the practical and critical thinking skills they will need to be the inventors and innovators of the future. Fab Labs are technical platforms for STEM education, workforce development and business idea prototyping.</p>",
+            "incorrect": "<p><span>Sorry.</span> It's actually an excess of Carbon Dioxide and Water that form carbonic acid. <br/><br/>Chevron has teamed up with the Fab Foundation in the first corporate initiative of its kind.  A Fab Lab gives students the tools to develop the practical and critical thinking skills they will need to be the inventors and innovators of the future. Fab Labs are technical platforms for STEM education, workforce development and business idea prototyping.</p>" // no comma here
         }
     ]
 };
