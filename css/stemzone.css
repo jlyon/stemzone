@@ -80,6 +80,7 @@ html, body, .page {
 /* line 68, ../sass/stemzone.sass */
 h1, h2, h3, h4, h5, h6 {
   font-family: "EraserRegular";
+  text-transform: uppercase;
 }
 
 /* line 71, ../sass/stemzone.sass */
@@ -128,7 +129,7 @@ h1 {
 .quizArea a.restart:hover, .quizArea a.restart:active, .quizArea a.restart:focus {
   opacity: 0.9;
 }
-/* line 148, ../sass/_mixins.sass */
+/* line 150, ../sass/_mixins.sass */
 .front .quizArea a.restart {
   display: none;
 }
@@ -180,8 +181,9 @@ a.startQuiz:hover, a.startQuiz:active, a.startQuiz:focus {
   padding-top: 71px;
   position: absolute;
   font-family: "EraserRegular";
+  text-transform: uppercase;
 }
-/* line 148, ../sass/_mixins.sass */
+/* line 150, ../sass/_mixins.sass */
 .front .quizArea > .quizScore {
   display: none;
 }
@@ -212,6 +214,7 @@ a.startQuiz:hover, a.startQuiz:active, a.startQuiz:focus {
 .questions .question h3 {
   color: #41acc9;
   font-family: "Jrhand";
+  text-transform: none;
   font-size: 36px;
 }
 /* line 163, ../sass/stemzone.sass */
@@ -238,6 +241,7 @@ a.startQuiz:hover, a.startQuiz:active, a.startQuiz:focus {
   display: block;
   font-size: 28px;
   font-family: "EraserRegular";
+  text-transform: uppercase;
   margin-left: 45px;
 }
 /* line 185, ../sass/stemzone.sass */
@@ -282,6 +286,7 @@ a.startQuiz:hover, a.startQuiz:active, a.startQuiz:focus {
 /* line 217, ../sass/stemzone.sass */
 .questions .revealing .responses p > span {
   font-family: "EraserRegular";
+  text-transform: uppercase;
   display: block;
   font-size: 60px;
   width: 100%;
@@ -315,7 +320,7 @@ a.startQuiz:hover, a.startQuiz:active, a.startQuiz:focus {
 .checkAnswer:hover, .checkAnswer:active, .checkAnswer:focus {
   opacity: 0.9;
 }
-/* line 148, ../sass/_mixins.sass */
+/* line 150, ../sass/_mixins.sass */
 .front .checkAnswer {
   display: none;
 }
@@ -435,6 +440,7 @@ a.startQuiz:hover, a.startQuiz:active, a.startQuiz:focus {
 /* line 322, ../sass/stemzone.sass */
 .questionCount {
   font-family: "EraserRegular";
+  text-transform: uppercase;
   color: #959595;
   font-size: 20px;
   position: absolute;
