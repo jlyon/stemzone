@@ -6,11 +6,11 @@ var quizJSON = {
     "info": {
         "name":    "What's your STEM I.Q.?",
         "main":    "", // Text below title on splash page
-        "results": "<h5>Learn More</h5><p>Etiam scelerisque, nunc ac egestas consequat, odio nibh euismod nulla, eget auctor orci nibh vel nisi. Aliquam erat volutpat. Mauris vel neque sit amet nunc gravida congue sed sit amet purus.</p>",
-        "level1":  "Jeopardy Ready",
-        "level2":  "Jeopardy Contender",
-        "level3":  "Jeopardy Amateur",
-        "level4":  "Jeopardy Newb",
+        "results": "<h5>We hope you enjoyed the quiz. Click on Restart in the upper-left to try your hand at some new questions.</p>",
+        "level1":  "STEM Expert",
+        "level2":  "STEM Contender",
+        "level3":  "STEM Amateur",
+        "level4":  "You've go some work to do",
         "level5":  "Stay in school, kid..." // no comma here
     },
     "questions": [
