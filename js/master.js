@@ -18,6 +18,7 @@ function startQuiz() {
   });
 }
 startQuiz();
+app.initialize();
 
 // Handle restarts and saving data
 function restartQuiz(action) {
@@ -84,42 +85,4 @@ $('a.nextQuestion').click(function () {
 // Wrapper
 });
 
-/* **************** FILES/PHONEGAP support ******************* */
-
-function onDeviceReady() {
-  alert('ready');
-   window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, fail);
-   window.resolveLocalFileSystemURI("/sdcard/example.txt", onResolveSuccess, fail);
-   var isApp = 'yes';
-   var root = this;
-   cb = window.plugins.childBrowser;
-   call();
-}
-
-function onFileSystemSuccess(fileSystem) {
-   console.log(fileSystem.name);
-}
-
-function onResolveSuccess(fileEntry) {
-   console.log(fileEntry.name);
-}
-
-function fail(evt) {
-   console.log(evt.target.error.code);
-}
-
-
-function call(){
-   window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, successDirectoryReader, null);
-
-}
-function successDirectoryReader(fileSystem){
-  try {
-    var dirEntry = fileSystem.root;
-    var directoryReader = dirEntry.createReader();
-    directoryReader.readEntries(success,failure);
-  } catch (e) {
-    alert(e);
-  }
-}
 
