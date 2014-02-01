@@ -24,17 +24,20 @@
   +box-sizing(border-box)
 
 html
-  background: url(../images/back.jpg) no-repeat 0 0
-  background-size: cover
-
-html, body
-  min-height: 100%
 
 body
   color: white
   font-family: $font
-  padding: $area-pad
+
+html, body, .page
+  height: 100%
+
+.page
+  background: url(../images/back.jpg) no-repeat 0 0
+  background-size: cover
+  min-height: 100%
   position: relative
+  padding: $area-pad
 
 .back-top,
 .back-right,
@@ -81,13 +84,14 @@ h1
     +s-replace(logo)
     margin-top: 60px
 
-a.restart
-  +s-replace(restart, true)
-  position: absolute
-  top: $area-pad
-  left: $area-pad
+.quizArea
+  a.restart
+    +s-replace(restart, true)
+    position: absolute
+    top: $area-pad
+    left: $area-pad
 
-  +hide-front
+    +hide-front
 
 .quizName
   display: none!important
@@ -291,6 +295,12 @@ a.startQuiz
   .quizResultsCopy
     padding-top: 20px
 
+  a.restart
+    margin-top: 30px
+    +s-replace(restart-big, true)
+    +div-center(true)
+
+
 .complete
   .quizArea
     display: block!important
@@ -316,7 +326,7 @@ a.startQuiz
   bottom: 0
   left: 0
   right: 0
-  width: 100%
+  width: 100%!important
   +opacity(0.6)
   z-index: 0
 
