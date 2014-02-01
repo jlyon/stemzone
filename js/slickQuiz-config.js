@@ -24,7 +24,7 @@ var quizJSON = {
                 {"option": "9.8 m/s<sup>2</sup>", "correct": true}
             ],
             "correct": "<p><span>That's right!</span> The acceleration due to gravity is 9.8 m/s<sup>2</sup> when the object is close to earth .  Think about how that might be different if the object was in outerspace.  You're off to a great start!</p>",
-            "incorrect": "<p><span>Not Quite.</span> The acceleration due to gravity is 9.8 m/s<sup>2</sup>.</p>" // no comma here
+            "incorrect": "<p align='center'><span>Not Quite.</span> The acceleration due to gravity is 9.8 m/s<sup>2</sup>.</p>" // no comma here
         },
         { // Question 2 - Multiple Choice, Multiple True Answers, Select Any
             "id": 2,
@@ -144,7 +144,7 @@ var quizJSON = {
                 {"option": "David Copperfield", "correct": false},
                 {"option": "Stephen Hawking", "correct": false}
             ],
-            "correct": "<p><span>Yes.</span> That's why it's called Bernoulli's Principle.</p>",
+            "correct": "<p align='center'><span>Yes.</span> That's why it's called Bernoulli's Principle.</p>",
             "incorrect": "<p><span>The right answer is:</span> Daniel Bernoulli. He stated that an increase in fluid speed occurs simultaneously with a decrease in pressure.</p>" // no comma here
         },
         { // Question 12
@@ -193,8 +193,8 @@ var quizJSON = {
                 {"option": "Googol", "correct": true},
                 {"option": "Centillion", "correct": false}
             ],
-            "correct": "<p><span>Spot on.</span> Googol was the inspiration for the name Google.</p>",
-            "incorrect": "<p><span>Almost.</span> A one followed by 100 zeros is a Googol.</p>" // no comma here
+            "correct": "<p align='center'><span>Spot on.</span> Googol was the inspiration for the name Google.</p>",
+            "incorrect": "<p align='center'><span>Almost.</span> A one followed by 100 zeros is a Googol.</p>" // no comma here
         }
         ,
         { // Question 16
