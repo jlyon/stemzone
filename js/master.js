@@ -6,24 +6,6 @@ var timer;
 var downtime = 30;
 var isPhonegap = false;
 
-// Phonegap Event listener    
-function load() {
-  document.addEventListener('deviceready', init, false);
-}
-
-// Called when device is ready - Do nothing 
-function init() {
-  isPhonegap = true;
-}      
-
-// Called to write file to card
-function writeFile(param) {
-  var writer = new FileWriter("/sdcard/stemzone_quizlog.txt");
-  writer.write(param + "\n", false);              
-  alert("file Written to SD Card");
-}
-
-
 // Init quiz
 function startQuiz() {
   $quiz.slickQuiz({
@@ -98,6 +80,45 @@ $('a.nextQuestion').click(function () {
     $('body').addClass('complete');
   }
 });
+
+
+/* **************** FILES/PHONEGAP support ******************* */
+
+function onDeviceReady() {
+   window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, fail);
+   window.resolveLocalFileSystemURI("/sdcard/example.txt", onResolveSuccess, fail);
+   var isApp = 'yes';
+   var root = this;
+   cb = window.plugins.childBrowser;
+   call();
+}
+
+function onFileSystemSuccess(fileSystem) {
+   console.log(fileSystem.name);
+}
+
+function onResolveSuccess(fileEntry) {
+   console.log(fileEntry.name);
+}
+
+function fail(evt) {
+   console.log(evt.target.error.code);
+}
+
+
+function call(){
+   window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, successDirectoryReader, null);
+
+}
+function successDirectoryReader(fileSystem){
+  try {
+    var dirEntry = fileSystem.root;
+    var directoryReader = dirEntry.createReader();
+    directoryReader.readEntries(success,failure);
+  } catch (e) {
+    alert(e);
+  }
+}
 
 
 // Wrapper
