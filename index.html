@@ -2,18 +2,26 @@
 <html>
     <head>
         <meta content="text/html; charset=utf-8" http-equiv="content-type">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1" />
 
         <title>What's your Stemzone I.Q.?</title>
 
         <link href="css/reset.css" media="screen" rel="stylesheet" type="text/css">
         <link href="css/slickQuiz.css" media="screen" rel="stylesheet" type="text/css">
-        <link href="css/master.css" media="screen" rel="stylesheet" type="text/css">
+        <link href="css/stemzone.css" media="screen" rel="stylesheet" type="text/css">
+        <!--<link href="css/master.css" media="screen" rel="stylesheet" type="text/css">-->
     </head>
 
-    <body id="slickQuiz">
+    <body id="slickQuiz" class="front"><div class="page">
+        <div class="back-top"></div>
+        <div class="back-right"></div>
+        <div class="back-left"></div>
+        <div class="back-bottom"></div>
+        <h1 class="logo">Chevron Stemzone</h1>
         <h1 class="quizName"><!-- where the quiz name goes --></h1>
 
         <div class="quizArea">
+            <a class="restart">Restart</a>
             <div class="quizHeader">
                 <!-- where the quiz main copy goes -->
 
@@ -38,9 +46,12 @@
             </div>
         </div>
 
+        <div class="footer"></div>
+        <div class="chevron"></div>
+
         <script src="js/jquery.js"></script>
         <script src="js/slickQuiz-config.js"></script>
         <script src="js/slickQuiz.js"></script>
         <script src="js/master.js"></script>
-    </body>
+    </div></body>
 </html>

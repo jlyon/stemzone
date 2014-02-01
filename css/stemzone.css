@@ -1,0 +1,480 @@
+@font-face {
+  font-family: "EraserRegular";
+  src: url("../fonts/EraserRegular.ttf");
+  src: url("../fonts/EraserRegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Jrhand";
+  src: url("../fonts/Jrhand.ttf");
+  src: url("../fonts/Jrhand.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 23, ../sass/stemzone.sass */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 28, ../sass/stemzone.sass */
+body {
+  color: white;
+  font-family: "Jrhand";
+}
+
+/* line 32, ../sass/stemzone.sass */
+html, body, .page {
+  height: 100%;
+}
+
+/* line 35, ../sass/stemzone.sass */
+.page {
+  background: url(../images/back.jpg) no-repeat 0 0;
+  background-size: cover;
+  min-height: 100%;
+  position: relative;
+  padding: 40px;
+}
+
+/* line 42, ../sass/stemzone.sass */
+.back-top,
+.back-right,
+.back-left {
+  opacity: 0.1;
+  position: absolute;
+  z-index: 0;
+}
+
+/* line 49, ../sass/stemzone.sass */
+.back-top {
+  background: url('../images/sprites-s0921ce75d0.png') 0 -1308px no-repeat;
+  height: 85px;
+  width: 228px;
+  top: 0;
+  right: 20%;
+}
+
+/* line 54, ../sass/stemzone.sass */
+.back-right {
+  background: url('../images/sprites-s0921ce75d0.png') 0 -403px no-repeat;
+  height: 301px;
+  width: 302px;
+  bottom: 15%;
+  right: 0;
+}
+
+/* line 59, ../sass/stemzone.sass */
+.back-left {
+  background: url('../images/sprites-s0921ce75d0.png') 0 -911px no-repeat;
+  height: 141px;
+  width: 120px;
+  bottom: 40%;
+  left: 0;
+}
+
+/* line 68, ../sass/stemzone.sass */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "EraserRegular";
+}
+
+/* line 71, ../sass/stemzone.sass */
+h1 {
+  font-size: 60px;
+  text-align: center;
+}
+
+/* line 79, ../sass/stemzone.sass */
+.logo {
+  background: url('../images/sprites-s0921ce75d0.png') 0 -1230px no-repeat;
+  height: 33px;
+  width: 231px;
+  display: inline-block;
+  overflow: hidden;
+  text-indent: -9000px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block !important;
+}
+/* line 83, ../sass/stemzone.sass */
+.front .logo {
+  background: url('../images/sprites-s0921ce75d0.png') 0 -855px no-repeat;
+  height: 56px;
+  width: 400px;
+  display: inline-block;
+  overflow: hidden;
+  text-indent: -9000px;
+  margin-top: 60px;
+}
+
+/* line 88, ../sass/stemzone.sass */
+.quizArea a.restart {
+  background: url('../images/sprites-s0921ce75d0.png') 0 -1612px no-repeat;
+  height: 34px;
+  width: 130px;
+  display: inline-block;
+  overflow: hidden;
+  text-indent: -9000px;
+  cursor: pointer;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+/* line 80, ../sass/_mixins.sass */
+.quizArea a.restart:hover, .quizArea a.restart:active, .quizArea a.restart:focus {
+  opacity: 0.9;
+}
+/* line 148, ../sass/_mixins.sass */
+.front .quizArea a.restart {
+  display: none;
+}
+
+/* line 96, ../sass/stemzone.sass */
+.quizName {
+  display: none !important;
+}
+/* line 99, ../sass/stemzone.sass */
+.front .quizName {
+  display: block !important;
+  margin-top: 110px;
+}
+
+/* line 103, ../sass/stemzone.sass */
+.quizArea {
+  text-align: center;
+}
+
+/* line 106, ../sass/stemzone.sass */
+.quizHeader {
+  position: relative;
+  z-index: 1;
+}
+
+/* line 109, ../sass/stemzone.sass */
+a.startQuiz {
+  background: url('../images/sprites-s0921ce75d0.png') 0 -1263px no-repeat;
+  height: 45px;
+  width: 288px;
+  display: inline-block;
+  overflow: hidden;
+  text-indent: -9000px;
+  cursor: pointer;
+  margin-top: 50px;
+}
+/* line 80, ../sass/_mixins.sass */
+a.startQuiz:hover, a.startQuiz:active, a.startQuiz:focus {
+  opacity: 0.9;
+}
+
+/* line 118, ../sass/stemzone.sass */
+.quizArea > .quizScore {
+  background: url('../images/sprites-s0921ce75d0.png') 0 -1393px no-repeat;
+  height: 114px;
+  width: 135px;
+  right: 40px;
+  top: 40px;
+  padding-top: 71px;
+  position: absolute;
+  font-family: "EraserRegular";
+}
+/* line 148, ../sass/_mixins.sass */
+.front .quizArea > .quizScore {
+  display: none;
+}
+
+/* line 128, ../sass/stemzone.sass */
+.score-label {
+  display: none;
+}
+
+/* line 131, ../sass/stemzone.sass */
+.score-value {
+  float: left;
+  font-size: 40px;
+  width: 67px;
+  text-align: center;
+}
+
+/* line 151, ../sass/stemzone.sass */
+.questions {
+  padding-top: 60px;
+  text-align: left;
+  max-width: 65%;
+  margin-right: auto;
+  margin-left: auto;
+  display: block !important;
+}
+/* line 158, ../sass/stemzone.sass */
+.questions .question h3 {
+  color: #41acc9;
+  font-family: "Jrhand";
+  font-size: 36px;
+}
+/* line 163, ../sass/stemzone.sass */
+.questions .answers {
+  padding-top: 60px;
+}
+/* line 166, ../sass/stemzone.sass */
+.questions .answers li {
+  margin-bottom: 30px;
+  position: relative;
+}
+/* line 170, ../sass/stemzone.sass */
+.questions .answers input {
+  float: left;
+  width: 50px;
+  height: 31px;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  margin: 0 0 0 -5px;
+}
+/* line 179, ../sass/stemzone.sass */
+.questions .answers label {
+  display: block;
+  font-size: 28px;
+  font-family: "EraserRegular";
+  margin-left: 45px;
+}
+/* line 185, ../sass/stemzone.sass */
+.questions .answers .marker {
+  background: url('../images/sprites-s0921ce75d0.png') 0 -1646px no-repeat;
+  height: 23px;
+  width: 21px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+/* line 195, ../sass/stemzone.sass */
+.questions .selected label {
+  color: #959595;
+}
+/* line 198, ../sass/stemzone.sass */
+.questions .selected .marker {
+  background: url('../images/sprites-s0921ce75d0.png') 0 -1669px no-repeat;
+  height: 23px;
+  width: 21px;
+}
+/* line 202, ../sass/stemzone.sass */
+.questions .selected input:checked ~ label {
+  color: white !important;
+}
+/* line 205, ../sass/stemzone.sass */
+.questions .selected input:checked ~ .marker {
+  background: url('../images/sprites-s0921ce75d0.png') 0 -1692px no-repeat;
+  height: 23px;
+  width: 21px;
+}
+/* line 210, ../sass/stemzone.sass */
+.questions .revealing h3 {
+  display: none;
+}
+/* line 214, ../sass/stemzone.sass */
+.questions .revealing .responses p {
+  font-size: 36px;
+}
+/* line 217, ../sass/stemzone.sass */
+.questions .revealing .responses p > span {
+  font-family: "EraserRegular";
+  display: block;
+  font-size: 60px;
+  width: 100%;
+  margin-bottom: 60px;
+  text-align: center;
+}
+/* line 226, ../sass/stemzone.sass */
+.questions .revealing .responses .correct span {
+  color: #3fc03f;
+}
+/* line 230, ../sass/stemzone.sass */
+.questions .revealing .responses .incorrect span {
+  color: #f83435;
+}
+
+/* line 235, ../sass/stemzone.sass */
+.checkAnswer {
+  margin-top: 85px;
+  background: url('../images/sprites-s0921ce75d0.png') 0 -1097px no-repeat;
+  height: 45px;
+  width: 347px;
+  display: inline-block;
+  overflow: hidden;
+  text-indent: -9000px;
+  cursor: pointer;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+/* line 80, ../sass/_mixins.sass */
+.checkAnswer:hover, .checkAnswer:active, .checkAnswer:focus {
+  opacity: 0.9;
+}
+/* line 148, ../sass/_mixins.sass */
+.front .checkAnswer {
+  display: none;
+}
+/* line 241, ../sass/stemzone.sass */
+.selected .checkAnswer {
+  background: url('../images/sprites-s0921ce75d0.png') 0 -1052px no-repeat;
+  height: 45px;
+  width: 347px;
+  display: inline-block;
+  overflow: hidden;
+  text-indent: -9000px;
+  display: block;
+}
+
+/* line 245, ../sass/stemzone.sass */
+.nextQuestion {
+  margin-top: 50px;
+  background: url('../images/sprites-s0921ce75d0.png') 0 -1142px no-repeat;
+  height: 44px;
+  width: 288px;
+  display: inline-block;
+  overflow: hidden;
+  text-indent: -9000px;
+  cursor: pointer;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  display: none;
+}
+/* line 80, ../sass/_mixins.sass */
+.nextQuestion:hover, .nextQuestion:active, .nextQuestion:focus {
+  opacity: 0.9;
+}
+/* line 251, ../sass/stemzone.sass */
+.revealing .nextQuestion {
+  display: block !important;
+}
+
+/* line 259, ../sass/stemzone.sass */
+.quizResults .quizScore {
+  background: none;
+  font-size: 24px;
+  margin-top: 40px;
+  position: relative;
+  right: auto;
+  top: 0;
+  text-align: center;
+  padding-top: 0;
+  width: 100%;
+}
+/* line 270, ../sass/stemzone.sass */
+.quizResults .quizScore span {
+  color: #41acc9;
+  display: block;
+  font-size: 62px;
+  margin-top: 20px;
+}
+/* line 276, ../sass/stemzone.sass */
+.quizResults .quizLevel, .quizResults .quizResultsCopy {
+  text-align: left;
+  max-width: 65%;
+  margin-right: auto;
+  margin-left: auto;
+  display: block !important;
+  font-size: 36px;
+}
+/* line 282, ../sass/stemzone.sass */
+.quizResults .quizLevel {
+  padding-top: 60px;
+  text-align: center;
+}
+/* line 288, ../sass/stemzone.sass */
+.quizResults .quizLevel.level1 span, .quizResults .quizLevel.level2 span {
+  color: #3fc03f;
+}
+/* line 292, ../sass/stemzone.sass */
+.quizResults .quizLevel.level3 span {
+  color: #dd9121;
+}
+/* line 297, ../sass/stemzone.sass */
+.quizResults .quizLevel.level4 span, .quizResults .quizLevel.level5 span {
+  color: #f83435;
+}
+/* line 301, ../sass/stemzone.sass */
+.quizResults .quizResultsCopy {
+  padding-top: 20px;
+}
+/* line 304, ../sass/stemzone.sass */
+.quizResults a.restart {
+  margin-top: 30px;
+  background: url('../images/sprites-s0921ce75d0.png') 0 -1186px no-repeat;
+  height: 44px;
+  width: 288px;
+  display: inline-block;
+  overflow: hidden;
+  text-indent: -9000px;
+  cursor: pointer;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+/* line 80, ../sass/_mixins.sass */
+.quizResults a.restart:hover, .quizResults a.restart:active, .quizResults a.restart:focus {
+  opacity: 0.9;
+}
+
+/* line 311, ../sass/stemzone.sass */
+.complete .quizArea {
+  display: block !important;
+}
+/* line 314, ../sass/stemzone.sass */
+.complete .questions,
+.complete .quizArea .quizScore {
+  display: none !important;
+}
+
+/* line 322, ../sass/stemzone.sass */
+.questionCount {
+  font-family: "EraserRegular";
+  color: #959595;
+  font-size: 20px;
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+}
+
+/* line 330, ../sass/stemzone.sass */
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100% !important;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6;
+  z-index: 0;
+}
+/* line 339, ../sass/stemzone.sass */
+.front .footer {
+  background: url('../images/sprites-s0921ce75d0.png') 0 0 no-repeat;
+  height: 403px;
+  width: 1280px;
+}
+
+/* line 342, ../sass/stemzone.sass */
+.chevron {
+  background: url('../images/sprites-s0921ce75d0.png') 0 -1507px no-repeat;
+  height: 105px;
+  width: 112px;
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+}
+/* line 348, ../sass/stemzone.sass */
+.front .chevron {
+  background: url('../images/sprites-s0921ce75d0.png') 0 -704px no-repeat;
+  height: 151px;
+  width: 161px;
+  left: 50%;
+  margin-left: -80px;
+  bottom: 80px;
+}
