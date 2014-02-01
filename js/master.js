@@ -33,7 +33,6 @@ $(function () {
 
     $('a.nextQuestion').click(function () {
       if($(this).parent().is(':last-child')) {
-        console.log($(this).parent());
         $('body').addClass('complete');
       }
     });

@@ -29,7 +29,7 @@ html {
 
 /* line 30, ../sass/stemzone.sass */
 html, body {
-  height: 100%;
+  min-height: 100%;
 }
 
 /* line 33, ../sass/stemzone.sass */
