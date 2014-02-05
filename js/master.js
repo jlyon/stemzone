@@ -1,44 +1,12 @@
-$(function () {
-// Wrapper
-
 var $quiz = $('#slickQuiz');
 var timer;
 var downtime = 30;
 var device = false;
 
-// See if we need to save data onload
-document.addEventListener("deviceready", onDeviceReady, false);
-function onDeviceReady() {
-  device = device.name + device.uuid;
-  navigator.network.isReachable("phonegap.com", reachableCallback, {});
-}
-// Check network status
-function reachableCallback(reachability) {
-  var networkState = reachability.code || reachability;
-  if (NetworkStatus.REACHABLE_VIA_CARRIER_DATA_NETWORK || NetworkStatus.REACHABLE_VIA_CARRIER_DATA_NETWORK) {
-    firebaseSave();
-  }
-}
-//firebaseSave();
 
-function firebaseSave() {
-  var fb = new Firebase('https://dazzling-fire-8476.firebaseio.com/');
-  Lawnchair(function(){
-    var that = this;
-    this.batch({saved: 0}, function() {
-      this.each(function(record, index) {
-        if (record.end != undefined) {
-          record.time = record.end - record.start;
-        }
-        record.device = device;
-        fb.push(record);
-        that.remove(record.key, function() {
-          //console.log('removed');
-        });
-      })
-    })
-  })
-}
+
+$(function () {
+// Wrapper
 
 // Init quiz
 function startQuiz() {
@@ -138,6 +106,47 @@ function guid() {
 // Wrapper
 });
 
+
+
+//
+// Phonegap integration
+//
+
+// See if we need to save data onload
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+  alert('ready');
+  device = device.name + device.uuid;
+  navigator.network.isReachable("phonegap.com", reachableCallback, {});
+}
+// Check network status
+function reachableCallback(reachability) {
+  var networkState = reachability.code || reachability;
+  if (NetworkStatus.REACHABLE_VIA_CARRIER_DATA_NETWORK || NetworkStatus.REACHABLE_VIA_CARRIER_DATA_NETWORK) {
+    firebaseSave();
+    alert('save)');
+  }
+}
+//firebaseSave();
+
+function firebaseSave() {
+  var fb = new Firebase('https://dazzling-fire-8476.firebaseio.com/');
+  Lawnchair(function(){
+    var that = this;
+    this.batch({saved: 0}, function() {
+      this.each(function(record, index) {
+        if (record.end != undefined) {
+          record.time = record.end - record.start;
+        }
+        record.device = device;
+        fb.push(record);
+        that.remove(record.key, function() {
+          //console.log('removed');
+        });
+      })
+    })
+  })
+}
 
 // Save the record in local cache
 // This is called from slickQuiz.js
