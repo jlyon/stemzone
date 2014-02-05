@@ -21,10 +21,10 @@ var quizJSON = {
                 {"option": "100 m/s", "correct": false},
                 {"option": "50 ft/s", "correct": false},
                 {"option": "0", "correct": false},
-                {"option": "9.8 m/s<sup>2</sup>", "correct": true}
+                {"option": "9.8 m/s/s", "correct": true}
             ],
-            "correct": "<p><span>That's right!</span> The acceleration due to gravity is 9.8 m/s<sup>2</sup> when the object is close to earth .  Think about how that might be different if the object was in outerspace.  You're off to a great start!</p>",
-            "incorrect": "<p align='center'><span>Not Quite.</span> The acceleration due to gravity is 9.8 m/s<sup>2</sup>.</p>" // no comma here
+            "correct": "<p><span>That's right!</span> The acceleration due to gravity is 9.8 m/s/s when the object is close to earth .  Think about how that might be different if the object was in outerspace.  You're off to a great start!</p>",
+            "incorrect": "<p align='center'><span>Not Quite.</span> The acceleration due to gravity is 9.8 m/s/s.</p>" // no comma here
         },
         { // Question 2 - Multiple Choice, Multiple True Answers, Select Any
             "id": 2,

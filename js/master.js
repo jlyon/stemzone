@@ -4,7 +4,41 @@ $(function () {
 var $quiz = $('#slickQuiz');
 var timer;
 var downtime = 30;
-var isPhonegap = false;
+var device = false;
+
+// See if we need to save data onload
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+  device = device.name + device.uuid;
+  navigator.network.isReachable("phonegap.com", reachableCallback, {});
+}
+// Check network status
+function reachableCallback(reachability) {
+  var networkState = reachability.code || reachability;
+  if (NetworkStatus.REACHABLE_VIA_CARRIER_DATA_NETWORK || NetworkStatus.REACHABLE_VIA_CARRIER_DATA_NETWORK) {
+    firebaseSave();
+  }
+}
+firebaseSave();
+
+function firebaseSave() {
+  var fb = new Firebase('https://dazzling-fire-8476.firebaseio.com/');
+  Lawnchair(function(){
+    var that = this;
+    this.batch({saved: 0}, function() {
+      this.each(function(record, index) {
+        if (record.end != undefined) {
+          record.time = record.end - record.start;
+        }
+        record.device = device;
+        fb.push(record);
+        that.remove(record.key, function() {
+          //console.log('removed');
+        });
+      })
+    })
+  })
+}
 
 // Init quiz
 function startQuiz() {
@@ -32,11 +66,10 @@ function restartQuiz(action) {
   $('body').addClass('front');
   //startQuiz();
   */
-  if (isPhonegap) {
+  if (device) {
     writeFile(param);
   }
   
-
   if (!$('body').hasClass('front')) {
     location.reload();
   }
@@ -60,6 +93,13 @@ $('a, label, input').bind('click', resetTimer);
 
 $('a.startQuiz').click(function() {
   $('body').removeClass('front');
+
+  // Create a new record
+  uuid = guid();
+  var d = new Date();
+  Lawnchair(function() {
+    this.save({key: uuid, start: d.getTime(), totalQuestions: 10});
+  });
 });
 
 // handle question actions
@@ -82,7 +122,34 @@ $('a.nextQuestion').click(function () {
   }
 });
 
+
+// Generate uuid, from http://stackoverflow.com/questions/105034/how-to-create-a-guid-uuid-in-javascript
+function s4() {
+  return Math.floor((1 + Math.random()) * 0x10000)
+             .toString(16)
+             .substring(1);
+};
+function guid() {
+  return s4() + s4();
+  //return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+  //       s4() + '-' + s4() + s4() + s4();
+}
+
 // Wrapper
 });
 
+
+// Save the record in local cache
+// This is called from slickQuiz.js
+function lawnchairSave(data) {
+  Lawnchair(function() {
+    var that = this;
+    this.get(uuid, function(record) {
+      for (var attrname in data) { record[attrname] = data[attrname]; }
+      var d = new Date();
+      record.end = d.getTime();
+      that.save(record);
+    })
+  })
+}
 

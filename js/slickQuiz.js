@@ -324,6 +324,21 @@
                 // Verify all/any true answers (and no false ones) were submitted
                 var correctResponse = plugin.method.compareAnswers(trueAnswers, selectedAnswers, selectAny);
 
+                if (plugin.config.showScore) {
+                    var score = $(_element + ' ' + _correct).length;
+                    $('#score-correct').text(score);
+                    var totalAnswered = parseInt(questionIndex) + 1;
+                    var incorrect = totalAnswered - score;
+                    $('#score-incorrect').text(incorrect); 
+                    var data = {
+                        'correct': score,
+                        'incorrect': incorrect,
+                        'totalAnswered': totalAnswered
+                    }
+                    data[questions[questionIndex].id] = correctResponse;
+                    lawnchairSave(data);                          
+                }
+
                 if (correctResponse) {
                     questionLI.addClass(correctClass);
                 }
@@ -356,13 +371,6 @@
                 if (nextQuestion.length) {
                     currentQuestion.fadeOut(300, function(){
                         nextQuestion.find(_prevQuestionBtn).show().end().fadeIn(500);
-                        if (plugin.config.showScore) {
-                            var score = $(_element + ' ' + _correct).length;
-                            $('#score-correct').text(score);
-                            console.log(currentQuestion.attr('id').replace('question', ''));
-                            var incorrect = parseInt(currentQuestion.attr('id').replace('question', '')) + 1 - score;
-                            $('#score-incorrect').text(incorrect);
-                        }
                     });
                 } else {
                     plugin.method.completeQuiz();
