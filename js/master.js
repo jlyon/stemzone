@@ -115,8 +115,9 @@ function guid() {
 // See if we need to save data onload
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
-  alert('ready');
   device = device.name + device.uuid;
+      firebaseSave();
+alert(device);
   navigator.network.isReachable("phonegap.com", reachableCallback, {});
 }
 // Check network status
