@@ -118,7 +118,6 @@ function onDeviceReady() {
   device = device.uuid;
 
   // Check network status
-  alert(navigator.connection.type);
   if (navigator.connection.type != Connection.NONE) {
     firebaseSave();
   }
@@ -128,7 +127,6 @@ function onDeviceReady() {
 function firebaseSave() {
   var fb = new Firebase('https://dazzling-fire-8476.firebaseio.com/');
   Lawnchair(function(){
-    alert('lawnchair');
     var that = this;
     this.batch({saved: 0}, function() {
       this.each(function(record, index) {
