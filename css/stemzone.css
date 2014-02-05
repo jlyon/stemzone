@@ -55,6 +55,8 @@ html, body, .page {
   background: url('../images/sprites-s0921ce75d0.png') 0 -1308px no-repeat;
   height: 85px;
   width: 228px;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
   top: 0;
   right: 20%;
 }
@@ -64,6 +66,8 @@ html, body, .page {
   background: url('../images/sprites-s0921ce75d0.png') 0 -403px no-repeat;
   height: 301px;
   width: 302px;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
   bottom: 15%;
   right: 0;
 }
@@ -73,6 +77,8 @@ html, body, .page {
   background: url('../images/sprites-s0921ce75d0.png') 0 -911px no-repeat;
   height: 141px;
   width: 120px;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
   bottom: 40%;
   left: 0;
 }
@@ -94,6 +100,8 @@ h1 {
   background: url('../images/sprites-s0921ce75d0.png') 0 -1230px no-repeat;
   height: 33px;
   width: 231px;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
   display: inline-block;
   overflow: hidden;
   text-indent: -9000px;
@@ -106,6 +114,8 @@ h1 {
   background: url('../images/sprites-s0921ce75d0.png') 0 -855px no-repeat;
   height: 56px;
   width: 400px;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
   display: inline-block;
   overflow: hidden;
   text-indent: -9000px;
@@ -117,6 +127,8 @@ h1 {
   background: url('../images/sprites-s0921ce75d0.png') 0 -1612px no-repeat;
   height: 34px;
   width: 130px;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
   display: inline-block;
   overflow: hidden;
   text-indent: -9000px;
@@ -125,11 +137,11 @@ h1 {
   top: 40px;
   left: 40px;
 }
-/* line 80, ../sass/_mixins.sass */
+/* line 84, ../sass/_mixins.sass */
 .quizArea a.restart:hover, .quizArea a.restart:active, .quizArea a.restart:focus {
   opacity: 0.9;
 }
-/* line 150, ../sass/_mixins.sass */
+/* line 154, ../sass/_mixins.sass */
 .front .quizArea a.restart {
   display: none;
 }
@@ -160,13 +172,15 @@ a.startQuiz {
   background: url('../images/sprites-s0921ce75d0.png') 0 -1263px no-repeat;
   height: 45px;
   width: 288px;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
   display: inline-block;
   overflow: hidden;
   text-indent: -9000px;
   cursor: pointer;
   margin-top: 50px;
 }
-/* line 80, ../sass/_mixins.sass */
+/* line 84, ../sass/_mixins.sass */
 a.startQuiz:hover, a.startQuiz:active, a.startQuiz:focus {
   opacity: 0.9;
 }
@@ -176,6 +190,8 @@ a.startQuiz:hover, a.startQuiz:active, a.startQuiz:focus {
   background: url('../images/sprites-s0921ce75d0.png') 0 -1393px no-repeat;
   height: 114px;
   width: 135px;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
   right: 40px;
   top: 40px;
   padding-top: 71px;
@@ -183,7 +199,7 @@ a.startQuiz:hover, a.startQuiz:active, a.startQuiz:focus {
   font-family: "EraserRegular";
   text-transform: uppercase;
 }
-/* line 150, ../sass/_mixins.sass */
+/* line 154, ../sass/_mixins.sass */
 .front .quizArea > .quizScore {
   display: none;
 }
@@ -249,6 +265,8 @@ a.startQuiz:hover, a.startQuiz:active, a.startQuiz:focus {
   background: url('../images/sprites-s0921ce75d0.png') 0 -1646px no-repeat;
   height: 23px;
   width: 21px;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
   display: block;
   position: absolute;
   left: 0;
@@ -264,6 +282,8 @@ a.startQuiz:hover, a.startQuiz:active, a.startQuiz:focus {
   background: url('../images/sprites-s0921ce75d0.png') 0 -1669px no-repeat;
   height: 23px;
   width: 21px;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 /* line 202, ../sass/stemzone.sass */
 .questions .selected input:checked ~ label {
@@ -274,6 +294,8 @@ a.startQuiz:hover, a.startQuiz:active, a.startQuiz:focus {
   background: url('../images/sprites-s0921ce75d0.png') 0 -1692px no-repeat;
   height: 23px;
   width: 21px;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 /* line 210, ../sass/stemzone.sass */
 .questions .revealing h3 {
@@ -308,6 +330,8 @@ a.startQuiz:hover, a.startQuiz:active, a.startQuiz:focus {
   background: url('../images/sprites-s0921ce75d0.png') 0 -1097px no-repeat;
   height: 45px;
   width: 347px;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
   display: inline-block;
   overflow: hidden;
   text-indent: -9000px;
@@ -316,11 +340,11 @@ a.startQuiz:hover, a.startQuiz:active, a.startQuiz:focus {
   margin-left: auto;
   display: block;
 }
-/* line 80, ../sass/_mixins.sass */
+/* line 84, ../sass/_mixins.sass */
 .checkAnswer:hover, .checkAnswer:active, .checkAnswer:focus {
   opacity: 0.9;
 }
-/* line 150, ../sass/_mixins.sass */
+/* line 154, ../sass/_mixins.sass */
 .front .checkAnswer {
   display: none;
 }
@@ -329,6 +353,8 @@ a.startQuiz:hover, a.startQuiz:active, a.startQuiz:focus {
   background: url('../images/sprites-s0921ce75d0.png') 0 -1052px no-repeat;
   height: 45px;
   width: 347px;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
   display: inline-block;
   overflow: hidden;
   text-indent: -9000px;
@@ -341,6 +367,8 @@ a.startQuiz:hover, a.startQuiz:active, a.startQuiz:focus {
   background: url('../images/sprites-s0921ce75d0.png') 0 -1142px no-repeat;
   height: 44px;
   width: 288px;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
   display: inline-block;
   overflow: hidden;
   text-indent: -9000px;
@@ -350,7 +378,7 @@ a.startQuiz:hover, a.startQuiz:active, a.startQuiz:focus {
   display: block;
   display: none;
 }
-/* line 80, ../sass/_mixins.sass */
+/* line 84, ../sass/_mixins.sass */
 .nextQuestion:hover, .nextQuestion:active, .nextQuestion:focus {
   opacity: 0.9;
 }
@@ -414,6 +442,8 @@ a.startQuiz:hover, a.startQuiz:active, a.startQuiz:focus {
   background: url('../images/sprites-s0921ce75d0.png') 0 -1186px no-repeat;
   height: 44px;
   width: 288px;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
   display: inline-block;
   overflow: hidden;
   text-indent: -9000px;
@@ -422,7 +452,7 @@ a.startQuiz:hover, a.startQuiz:active, a.startQuiz:focus {
   margin-left: auto;
   display: block;
 }
-/* line 80, ../sass/_mixins.sass */
+/* line 84, ../sass/_mixins.sass */
 .quizResults a.restart:hover, .quizResults a.restart:active, .quizResults a.restart:focus {
   opacity: 0.9;
 }
@@ -464,6 +494,8 @@ a.startQuiz:hover, a.startQuiz:active, a.startQuiz:focus {
   background: url('../images/sprites-s0921ce75d0.png') 0 0 no-repeat;
   height: 403px;
   width: 1280px;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* line 342, ../sass/stemzone.sass */
@@ -471,6 +503,8 @@ a.startQuiz:hover, a.startQuiz:active, a.startQuiz:focus {
   background: url('../images/sprites-s0921ce75d0.png') 0 -1507px no-repeat;
   height: 105px;
   width: 112px;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
   position: absolute;
   bottom: 40px;
   left: 40px;
@@ -480,6 +514,8 @@ a.startQuiz:hover, a.startQuiz:active, a.startQuiz:focus {
   background: url('../images/sprites-s0921ce75d0.png') 0 -704px no-repeat;
   height: 151px;
   width: 161px;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
   left: 50%;
   margin-left: -80px;
   bottom: 80px;
