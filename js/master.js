@@ -115,16 +115,11 @@ function guid() {
 // See if we need to save data onload
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
-  device = device.name + device.uuid;
-      firebaseSave();
-alert(device);
-  navigator.network.isReachable("phonegap.com", reachableCallback, {});
-}
-// Check network status
-function reachableCallback(reachability) {
-  var networkState = reachability.code || reachability;
-  if (NetworkStatus.REACHABLE_VIA_CARRIER_DATA_NETWORK || NetworkStatus.REACHABLE_VIA_CARRIER_DATA_NETWORK) {
-    alert('save)');
+  device = device.uuid;
+
+  // Check network status
+  alert(navigator.connection.type);
+  if (navigator.connection.type != Connection.NONE) {
     firebaseSave();
   }
 }
@@ -160,8 +155,6 @@ function lawnchairSave(data) {
       var d = new Date();
       record.end = d.getTime();
       that.save(record);
-        alert('save)')
-
     })
   })
 }
