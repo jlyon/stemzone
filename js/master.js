@@ -34,9 +34,9 @@ function restartQuiz(action) {
   $('body').addClass('front');
   //startQuiz();
   */
-  if (device) {
-    writeFile(param);
-  }
+
+  // Save how the quiz ended on the row
+  lawnchairSave({'action': action});
   
   if (!$('body').hasClass('front')) {
     location.reload();
