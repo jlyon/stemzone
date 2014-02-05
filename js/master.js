@@ -19,7 +19,7 @@ function reachableCallback(reachability) {
     firebaseSave();
   }
 }
-firebaseSave();
+//firebaseSave();
 
 function firebaseSave() {
   var fb = new Firebase('https://dazzling-fire-8476.firebaseio.com/');
