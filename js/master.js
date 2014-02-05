@@ -124,8 +124,8 @@ alert(device);
 function reachableCallback(reachability) {
   var networkState = reachability.code || reachability;
   if (NetworkStatus.REACHABLE_VIA_CARRIER_DATA_NETWORK || NetworkStatus.REACHABLE_VIA_CARRIER_DATA_NETWORK) {
-    firebaseSave();
     alert('save)');
+    firebaseSave();
   }
 }
 //firebaseSave();
@@ -133,6 +133,7 @@ function reachableCallback(reachability) {
 function firebaseSave() {
   var fb = new Firebase('https://dazzling-fire-8476.firebaseio.com/');
   Lawnchair(function(){
+    alert('lawnchair');
     var that = this;
     this.batch({saved: 0}, function() {
       this.each(function(record, index) {
@@ -159,6 +160,8 @@ function lawnchairSave(data) {
       var d = new Date();
       record.end = d.getTime();
       that.save(record);
+        alert('save)')
+
     })
   })
 }
