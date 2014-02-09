@@ -325,7 +325,11 @@
                 var correctResponse = plugin.method.compareAnswers(trueAnswers, selectedAnswers, selectAny);
 
                 if (plugin.config.showScore) {
+                    console.log(score);
                     var score = $(_element + ' ' + _correct).length;
+                    if (correctResponse) {
+                        score ++;
+                    }
                     $('#score-correct').text(score);
                     var totalAnswered = parseInt(questionIndex) + 1;
                     var incorrect = totalAnswered - score;

@@ -127,13 +127,13 @@ var quizJSON = {
             "id": 10,
             "q": "What percentage of jobs in the U.S. Require knowledge in at least one STEM field?",
             "a": [
-                {"option": "5%", "correct": false},
-                {"option": "20%", "correct": true},
-                {"option": "80%", "correct": false},
+                {"option": "5 percent", "correct": false},
+                {"option": "20 percent", "correct": true},
+                {"option": "80 percent", "correct": false},
                 {"option": "None of the above", "correct": false}
             ],
-            "correct": "<p><span>Yes, 20%.</span> Currently, 20 percent of all U.S. jobs – 26 million positions – require knowledge in one STEM field.1 And that number is estimated to grow 17 percent by 2018, compared with only 9.8 percent growth for all other fields combined.</p>",
-            "incorrect": "<p><span>No.</span> Can you believe that 20% of jobs in the U.S. Require knowledge in at least one STEM field? <br/><br/>Chevron is committed to increasing access to and the quality of education around the world because an educated and skilled workforce leads to economic growth – for our business, our partners and the communities where we operate.</p>" // no comma here
+            "correct": "<p><span>Yes, 20 percent.</span> Currently, 20 percent of all U.S. jobs – 26 million positions – require knowledge in one STEM field. And that number is estimated to grow 17 percent by 2018, compared with only 9.8 percent growth for all other fields combined.</p>",
+            "incorrect": "<p><span>No.</span> Can you believe that 20 percent of jobs in the U.S. Require knowledge in at least one STEM field? <br/><br/>Chevron is committed to increasing access to and the quality of education around the world because an educated and skilled workforce leads to economic growth – for our business, our partners and the communities where we operate.</p>" // no comma here
         },
         { // Question 11
             "id": 11,
