@@ -115,6 +115,7 @@ function guid() {
 // See if we need to save data onload
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
+  console.log('ready');
   device = device.uuid;
 
   // Check network status
@@ -135,6 +136,7 @@ function firebaseSave() {
         }
         record.device = device;
         fb.push(record);
+        fileSave(record);
         that.remove(record.key, function() {
           //console.log('removed');
         });
@@ -157,3 +159,56 @@ function lawnchairSave(data) {
   })
 }
 
+var textLine = '';
+function fileSave(item) {
+  console.log('filesave');
+  textline = json2csv(item);
+  console.log(textline);
+  window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
+}
+
+function gotFS(fileSystem) {
+  console.log('gotfs');
+  fileSystem.root.getFile("readme.txt", {create: true, exclusive: false}, gotFileEntry, fail);
+}
+
+function gotFileEntry(fileEntry) {
+  fileEntry.createWriter(gotFileWriter, fail);
+}
+
+function gotFileWriter(writer) {
+  writer.onwriteend = function(evt) {
+      console.log('appended');
+  };
+  writer.seek(writer.length);
+  writer.write("\r\n" + textline);
+}
+
+function fail(error) {
+  console.log(error.code);
+}
+
+
+function json2csv(item) {
+  var csv = [
+      item.device,
+      item.action,
+      item.start,
+      item.end,
+      item.time,
+      item.totalQuestions,
+      item.totalAnswered,
+      item.correct,
+      item.incorrect,
+  ];
+  for (i=1; i<=20; i++) {
+      if (item[i] != undefined) {
+          csv.push(item[i]);
+      }
+      else {
+          csv.push('');
+      }
+  }
+  console.log(csv);
+  return csv.join(',');
+}
