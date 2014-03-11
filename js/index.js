@@ -52,7 +52,7 @@ var app = {
 
 
 };
-function bootme() {
+/*function bootme() {
         console.log('ready');
         window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
     }
@@ -76,4 +76,4 @@ function bootme() {
 
     function fail(error) {
         console.log(error.code);
-    }
+    }*/
