@@ -36,9 +36,8 @@ var app = {
         device = device.uuid;
 
         // Check network status
-        if (navigator.connection.type != Connection.NONE) {
-            firebaseSave();
-        }
+        var connection = (navigator.connection.type != Connection.NONE) ? true : false;
+        saveRecords(connection);
     },
 
 

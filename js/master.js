@@ -126,8 +126,9 @@ function onDeviceReady() {
 }*/
 //firebaseSave();
 
-function firebaseSave() {
-  var fb = new Firebase('https://dazzling-fire-8476.firebaseio.com/');
+
+// Save the record to the filesystem (and firebase if connected to the internet)
+function saveRecords(connection) {
   Lawnchair(function(){
     var that = this;
     this.batch({saved: 0}, function() {
@@ -136,7 +137,9 @@ function firebaseSave() {
           record.time = record.end - record.start;
         }
         record.device = device;
-        fb.push(record);
+        if (connection) {
+          firebaseSave(record)
+        }
         fileSave(record);
         that.remove(record.key, function() {
           //console.log('removed');
@@ -145,6 +148,12 @@ function firebaseSave() {
     })
   })
 }
+
+function firebaseSave(record) {
+  var fb = new Firebase('https://dazzling-fire-8476.firebaseio.com/');
+  fb.push(record);
+}
+
 
 // Save the record in local cache
 // This is called from slickQuiz.js
