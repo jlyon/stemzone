@@ -20,7 +20,6 @@ function startQuiz() {
   });
 }
 startQuiz();
-app.initialize();
 
 // Handle restarts and saving data
 function restartQuiz(action) {
