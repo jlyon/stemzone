@@ -127,7 +127,6 @@ function onDeviceReady() {
 //firebaseSave();
 
 function firebaseSave() {
-  console.log('firebase save');
   var fb = new Firebase('https://dazzling-fire-8476.firebaseio.com/');
   Lawnchair(function(){
     var that = this;
@@ -157,8 +156,6 @@ function lawnchairSave(data) {
       for (var attrname in data) { record[attrname] = data[attrname]; }
       var d = new Date();
       record.end = d.getTime();
-      console.log('lawnchair');
-      console.log(record);
       that.save(record);
     })
   })
@@ -166,15 +163,12 @@ function lawnchairSave(data) {
 
 var textLine = '';
 function fileSave(item) {
-  console.log('filesave');
   textline = json2csv(item);
-  console.log(textline);
   window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
 }
 
 function gotFS(fileSystem) {
-  console.log('gotfs');
-  fileSystem.root.getFile("readme.txt", {create: true, exclusive: false}, gotFileEntry, fail);
+  fileSystem.root.getFile("stemzone_log.txt", {create: true, exclusive: false}, gotFileEntry, fail);
 }
 
 function gotFileEntry(fileEntry) {
@@ -182,9 +176,6 @@ function gotFileEntry(fileEntry) {
 }
 
 function gotFileWriter(writer) {
-  writer.onwriteend = function(evt) {
-      console.log('appended');
-  };
   writer.seek(writer.length);
   writer.write("\r\n" + textline);
 }
