@@ -2,6 +2,7 @@ var $quiz = $('#slickQuiz');
 var timer;
 var downtime = 30;
 var device = false;
+var uuid;
 
 
 
@@ -113,7 +114,7 @@ function guid() {
 //
 
 // See if we need to save data onload
-document.addEventListener("deviceready", onDeviceReady, false);
+/*document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
   console.log('ready');
   device = device.uuid;
@@ -122,7 +123,7 @@ function onDeviceReady() {
   if (navigator.connection.type != Connection.NONE) {
     firebaseSave();
   }
-}
+}*/
 //firebaseSave();
 
 function firebaseSave() {

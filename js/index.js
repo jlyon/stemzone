@@ -34,6 +34,15 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+
+        console.log('ready');
+        alert('asd');
+        device = device.uuid;
+
+        // Check network status
+        if (navigator.connection.type != Connection.NONE) {
+            firebaseSave();
+        }
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
