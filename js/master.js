@@ -20,6 +20,7 @@ function startQuiz() {
   });
 }
 startQuiz();
+app.initialize();
 
 // Handle restarts and saving data
 function restartQuiz(action) {
@@ -125,6 +126,7 @@ function onDeviceReady() {
 //firebaseSave();
 
 function firebaseSave() {
+  console.log('firebase save');
   var fb = new Firebase('https://dazzling-fire-8476.firebaseio.com/');
   Lawnchair(function(){
     var that = this;
@@ -153,6 +155,8 @@ function lawnchairSave(data) {
       for (var attrname in data) { record[attrname] = data[attrname]; }
       var d = new Date();
       record.end = d.getTime();
+      console.log('lawnchair');
+      console.log(record);
       that.save(record);
     })
   })
