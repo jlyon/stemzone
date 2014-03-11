@@ -42,28 +42,3 @@ var app = {
 
 
 };
-/*function bootme() {
-        console.log('ready');
-        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
-    }
-
-    function gotFS(fileSystem) {
-        console.log('gotfs');
-        fileSystem.root.getFile("readme.txt", {create: true, exclusive: false}, gotFileEntry, fail);
-    }
-
-    function gotFileEntry(fileEntry) {
-        fileEntry.createWriter(gotFileWriter, fail);
-    }
-
-    function gotFileWriter(writer) {
-        writer.onwriteend = function(evt) {
-            console.log('appended');
-        };
-        writer.seek(writer.length);
-        writer.write("\r\nsome sample text2");
-    }
-
-    function fail(error) {
-        console.log(error.code);
-    }*/
