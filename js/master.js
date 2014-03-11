@@ -153,6 +153,7 @@ function lawnchairSave(data) {
   Lawnchair(function() {
     var that = this;
     this.get(uuid, function(record) {
+      record = record == undefined ? [] : record; 
       for (var attrname in data) { record[attrname] = data[attrname]; }
       var d = new Date();
       record.end = d.getTime();
